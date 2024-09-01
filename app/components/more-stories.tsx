@@ -25,7 +25,7 @@ function PostPreview({
       </div>
 
       <h3 className="text-xl font-montserrat font-bold mb-3 leading-snug">
-        <Link href={`/posts/${slug}`} className="hover:underline">
+        <Link href={`/project/${slug}`} className="hover:underline">
           {title}
         </Link>
       </h3>
@@ -54,7 +54,7 @@ export default function MoreStories({ morePosts }: { morePosts: any[] }) {
             coverImage={post.coverImage}
             date={post.date}
             author={post.author}
-            slug={`project/${post.slug}`}
+            slug={post.slug}
             excerpt={post.excerpt}
           />
         ))}
