@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: var(--font-istok-web);
+}
+
+.section-gap {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .section-gap {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
