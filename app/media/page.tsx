@@ -52,7 +52,7 @@ interface cardPros {
 const NewsCard: React.FC<cardPros> = ({ id, img, title, date, href }) => {
   return (
     <Link key={id} href={href} target="_blank">
-      <div className="max-w-[360px] border rounded-md p-4">
+      <div className="max-w-[360px] border rounded-md p-4 bg-white">
         <div className="w-full h-[240px] bg-slate-100 relative">
           <Image
             src={img}
@@ -86,7 +86,7 @@ const page = async () => {
   const electronicMedia = await getElectronicMedia();
 
   return (
-    <div className="pt-[7rem] max-sm:pt-[4rem]">
+    <div className="pt-[7rem] max-sm:pt-[4rem] bg-[#DDF5FF]">
       {/* hero section */}
       <section className="container mx-auto px-6 xl:px-16 flex justify-center mt-10">
         <HeroSection title="News and Media" img="/cover-media.jpg" />
@@ -94,13 +94,13 @@ const page = async () => {
 
       {/* Electronic Media section */}
       <div className="container mx-auto xl:px-16 mt-12">
-        <h2 className="font-bold font-montserrat text-center text-lg md:text-3xl text-secondary bg-[#FFF2E8] p-3 rounded-md">
+        <h2 className="font-bold font-montserrat text-center text-lg md:text-2xl text-secondary bg-white p-3 rounded-md">
           Electronic Media
         </h2>
       </div>
 
-      <section className="container mx-auto flex justify-center my-8">
-        <div className="grid grid-cols-3 gap-5 max-sm:grid-cols-1 max-sm:gap-4 justify-center mx-auto">
+      <section className="container mx-auto px-6 xl:px-16 my-8">
+        <div className="grid grid-cols-3 gap-5 max-sm:grid-cols-1 max-sm:gap-4">
           {electronicMedia &&
             electronicMedia.map((emedia: Emedia) => {
               const { _id, videoTitle, videoId } = emedia;
@@ -124,11 +124,12 @@ const page = async () => {
 
       {/* Print Media section */}
       <div className="container mx-auto xl:px-16 mt-12">
-        <h2 className="font-bold font-montserrat text-center text-lg md:text-3xl text-secondary bg-[#DDF5FF] p-3 rounded-md">
+        <h2 className="font-bold font-montserrat text-center text-lg md:text-2xl text-secondary bg-white p-3 rounded-md">
           Print Media
         </h2>
       </div>
-      <section className="container mx-auto flex justify-center my-8">
+
+      <section className="container mx-auto flex justify-center py-8">
         <div className="grid grid-cols-3 gap-5 max-sm:grid-cols-1 max-sm:gap-4 justify-center">
           {printMedia &&
             printMedia.map((media: Media) => {

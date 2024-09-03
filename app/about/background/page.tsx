@@ -102,7 +102,10 @@ const page = () => {
       {/* stat section */}
       <section className="bg-[#FFECEC] grid grid-cols-12 max-sm:grid-cols-1">
         <div className="px-8 xl:px-28 mx-auto my-auto col-span-7">
-          <div className="xl:py-24 py-12">
+          <div className="xl:py-16 py-12">
+            <h3 className="text-xl font-montserrat font-bold mb-4 text-secondary">
+              Prevention Strategies
+            </h3>
             <p className="text-lg text-secondary">
               This ICBC project incorporates all three of these prevention
               strategies. It is built around an adaptive design that was
@@ -259,7 +262,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className="col-span-5 relative h-[200px] md:h-[900px]">
+        <div className="col-span-5 relative h-[200px] md:h-[660px]">
           <Image
             src="/about-backgroun-2.jpg"
             alt="icbc"
@@ -271,7 +274,11 @@ const page = () => {
 
       {/* reference section */}
       <section className="bg-[#ecfffe] grid grid-cols-12 max-sm:grid-cols-1">
-        <div className="p-8 xl:p-28 mx-auto my-auto col-span-7">
+        <div className="p-8 xl:py-14 xl:px-28 mx-auto my-auto col-span-7">
+          <h3 className="text-2xl max-sm:text-lg font-bold mb-4 text-secondary">
+            References
+          </h3>
+
           <p className="text-lg max-sm:text-base text-secondary">
             A Johns Hopkins University study[1] conducted jointly with a local
             research agency, Centre for Injury Prevention Research, Bangladesh
@@ -284,10 +291,8 @@ const page = () => {
         </div>
 
         {/* reference paper card */}
-        <div className="p-8 bg-white shadow-lg rounded-lg mx-8 my-8 col-span-5">
-          <h3 className="text-2xl max-sm:text-lg font-bold">References</h3>
-
-          <div className="flex flex-col gap-4 mt-4">
+        <div className="p-8 bg-white shadow-lg rounded-lg mx-8 col-span-5 my-auto">
+          <div className="flex flex-col gap-4">
             <p className="text-lg max-sm:text-base text-secondary">
               1. Hyder, A. A., Alonge, O., He, S., Wadhwaniya, S., Rahman, F.,
               Rahman, A., & Arifeen, S. E. (2014). Saving of children’s lives

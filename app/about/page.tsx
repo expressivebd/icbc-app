@@ -99,7 +99,7 @@ const page = () => {
         <div className="mx-auto my-auto col-span-7">
           <div className="py-28 max-sm:py-12">
             <h2 className="font-montserrat font-bold text-2xl max-sm:text-xl text-center text-secondary">
-              Aimed to Provide Children
+              Aimed to Provide
             </h2>
 
             {/* icons */}
@@ -157,8 +157,8 @@ const page = () => {
                   </defs>
                 </svg>
 
-                <h3 className="font-montserrat text-2xl max-sm:text-xl uppercase">
-                  Care
+                <h3 className="font-montserrat text-xl font-medium max-sm:text-xl uppercase">
+                  Children Care
                 </h3>
               </div>
 
@@ -195,8 +195,8 @@ const page = () => {
                   </defs>
                 </svg>
 
-                <h3 className="font-montserrat text-2xl max-sm:text-xl uppercase">
-                  Development
+                <h3 className="font-montserrat text-xl font-medium max-sm:text-xl uppercase">
+                  Children Development
                 </h3>
               </div>
 
@@ -233,8 +233,8 @@ const page = () => {
                   </defs>
                 </svg>
 
-                <h3 className="font-montserrat text-2xl max-sm:text-xl uppercase">
-                  Safety
+                <h3 className="font-montserrat text-xl font-medium max-sm:text-xl uppercase">
+                  Children Safety
                 </h3>
               </div>
             </div>
@@ -279,11 +279,11 @@ const page = () => {
           </h2>
 
           <Image
-            src="/partners-logo.png"
+            src="/partners-logo.jpg"
             alt="partners"
             width={768}
             height={768}
-            className="mt-12 max-sm:px-8"
+            className="mt-12 max-sm:px-8 rounded-md"
           />
         </div>
       </section>

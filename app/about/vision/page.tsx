@@ -99,7 +99,10 @@ const page = () => {
       {/* Vision section */}
       <section className="bg-[#FFECEC] grid grid-cols-12 max-sm:grid-cols-1">
         <div className="p-8 xl:px-28 mx-auto my-auto col-span-7">
-          <div className="py-28 max-sm:py-2">
+          <div className="py-12 max-sm:py-2">
+            <h3 className="text-2xl max-sm:text-lg font-bold mb-4 text-secondary">
+              Vision
+            </h3>
             <p className="text-lg text-secondary">
               A nation where all children have equitable access to quality early
               childhood care, education, protection and grow up to be healthy
@@ -109,18 +112,40 @@ const page = () => {
           </div>
 
           <div className="mt-8 md:mt-0">
-            <h4 className="font-bold font-montserrat mb-2 text-secondary">
+            <h3 className="text-2xl max-sm:text-lg font-bold mb-4 text-secondary">
               Values & Principles
-            </h4>
+            </h3>
 
             <p>
               It is crucial to keep the core values/principles of the vision in
               mind whenever designing the project activities.
             </p>
+
+            <ul className="list-disc list-outside text-secondary md:w-5/6 mt-4 px-4">
+              <li className="mb-2">
+                Our work should center around impact on children at the core of
+                all project decisions and safeguarding their interests.
+              </li>
+              <li className="mb-2">
+                In its foundation the project should facilitate children’s right
+                to comprehensive, holistic, integrated ECCD services (enshrined
+                in the ECCD policy 2013).
+              </li>
+              <li className="mb-2">
+                Commitment to quality, accessibility, accountability and
+                sustainability of services and results.
+              </li>
+              <li>
+                Should embody a systems perspective and collaboration, engaging
+                stakeholders across the ecosystem and utilize ongoing learning
+                and its application to improve quality, enabling equity and
+                inclusion and be adaptive to context and complexity.
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="col-span-5 relative h-[720px]">
+        <div className="col-span-5 relative h-[650px] md:h-auto">
           <Image
             src="/values-pic.jpg"
             alt="icbc"

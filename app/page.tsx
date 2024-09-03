@@ -7,18 +7,22 @@ import NewsCard from "./components/newsCard";
 const stats = [
   {
     title: "200k",
+    heading: "Child Care Centers",
     description: "children aged 1-5 across 8000 Child Care Centers",
   },
   {
     title: "360k",
+    heading: "Swim-Safe Facilities",
     description: "children aged 6-10 through 1600 Swim-Safe Facilities",
   },
   {
     title: "200k",
+    heading: "Positive Parenting",
     description: "children parents are educated on positive parenting",
   },
   {
     title: "16k",
+    heading: "Empowering Women",
     description: "women are employed and more exposured to networking",
   },
 ];
@@ -50,7 +54,7 @@ export default async function Page() {
 
         {/* headline and logos */}
         <div className="grid grid-cols-12 max-sm:flex max-sm:flex-col py-8 gap-8">
-          <div className="col-span-8 lg:pr-[8rem]">
+          <div className="col-span-8 lg:pr-[8rem] md:border-r-2 border-[#DDF5FF]">
             <h1 className="font-montserrat text-2xl max-sm:text-lg text-primary font-bold">
               সমাজভিত্তিক সমন্বিত শিশুযত্ন কেন্দ্রের মাধ্যমে শিশুর প্রারম্ভিক
               বিকাশ ও সুরক্ষা এবং সাঁতার সুবিধা প্রদান (আইসিবিসি) প্রকল্প
@@ -74,33 +78,43 @@ export default async function Page() {
       </section>
 
       {/* about section */}
-      <section className="bg-[#DDF5FF]">
+      <section className="bg-primary">
         {/* stat */}
         <div className="container mx-auto px-6 xl:px-16 grid grid-cols-12 max-sm:flex max-sm:flex-col items-center">
           <div className="container col-span-3 mx-auto section-gap">
-            <h2 className="font-montserrat font-bold text-2xl">
+            <h2 className="font-montserrat font-bold text-2xl text-white">
               Our Interventions <br /> and Reach
             </h2>
 
             <ButtonComponent text="Learn More" url="/project" />
           </div>
 
-          <div className="col-span-9 flex gap-14 max-sm:grid max-sm:grid-cols-2 max-sm:gap-8">
+          <div className="col-span-9 flex gap-2 max-sm:grid max-sm:grid-cols-2 max-sm:gap-x-0 max-sm:gap-y-6 pb-8 md:pb-0">
             {stats.map((obj, index) => {
               return (
-                <div key={index}>
-                  <h3 className="font-montserrat text-3xl max-sm:text-2xl font-bold text-[#005073]">
+                <div
+                  key={index}
+                  className={`border-r-2 border-[#DDF5FF] last:border-r-0 md:px-8 px-4 max-sm:my-auto ${
+                    index === 1 ? "max-sm:border-r-0" : ""
+                  }`}
+                >
+                  <h3 className="font-montserrat text-3xl max-sm:text-2xl font-bold text-white">
                     {obj.title}
                   </h3>
 
-                  <p className="text-secondary mt-2">{obj.description}</p>
+                  <h4 className="text-slate-200 text-lg font-montserrat font-semibold mt-2">
+                    {obj.heading}
+                  </h4>
+                  <p className="text-slate-300 mt-2">{obj.description}</p>
                 </div>
               );
             })}
           </div>
         </div>
+      </section>
 
-        {/* image and des section */}
+      {/* Intigraty community section */}
+      <section className="bg-[#DDF5FF]">
         <div className="container mx-auto px-6 xl:px-16 grid grid-cols-12 max-sm:flex max-sm:flex-col gap-20 max-sm:gap-10 section-gap">
           <div className="flex flex-col gap-8 max-sm:gap-4 col-span-5">
             <Image src="/about-01.jpg" alt="about" width={536} height={200} />

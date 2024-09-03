@@ -11,8 +11,14 @@ interface heroSecPros {
 
 const HeroSection: React.FC<heroSecPros> = ({ title, img }) => {
   return (
-    <div className="relative max-w-[1046px]">
-      <Image src={img} width={1046} height={350} alt="ICBC" />
+    <div className="relative max-w-[1046px] rounded-md">
+      <Image
+        src={img}
+        width={1046}
+        height={350}
+        alt="ICBC"
+        className="rounded-md"
+      />
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-3xl"></div>
       <h1 className="absolute inset-0 flex justify-center items-center font-montserrat font-bold text-4xl max-sm:text-2xl text-white">
@@ -34,7 +40,7 @@ interface cardPros {
 const NewsCard = ({ id, img, title, date, href }: cardPros) => {
   return (
     <Link key={id} href={href}>
-      <div className="max-w-[360px] max-sm:w-full border rounded-md p-4">
+      <div className="max-w-[360px] max-sm:w-full border rounded-md p-4 bg-white">
         <div className="w-full h-[240px] bg-slate-100 relative">
           <Image
             src={img}
@@ -58,7 +64,7 @@ const page = async () => {
   const allPosts = await getAllPosts(false);
 
   return (
-    <div className="pt-[7rem] max-sm:pt-[4rem]">
+    <div className="pt-[7rem] max-sm:pt-[4rem] bg-[#DDF5FF]">
       {/* hero section */}
       <section className="container mx-auto px-6 xl:px-16 flex justify-center mt-10">
         <HeroSection title="Events and Workshops" img="/cover-project.jpg" />
