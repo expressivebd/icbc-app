@@ -35,7 +35,7 @@ function Footer() {
         <Image src="/full-logo.svg" alt="logo" width={131} height={45} />
       </div>
 
-      <div className="text-white text-sm flex gap-8 justify-center">
+      <div className="text-white text-base flex gap-8 justify-center">
         <Link href="/about">About</Link>
         <Link
           target="_blank"
@@ -46,8 +46,55 @@ function Footer() {
         <Link href="/contact">Contact</Link>
       </div>
 
+      <div className="text-white text-base flex gap-8 justify-center">
+        <Link
+          href="https://mowca.gov.bd/"
+          target="_blank"
+          className="flex gap-2"
+        >
+          Ministry of Women and Children Affairs{" "}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="size-4"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+            />
+          </svg>
+        </Link>
+        <Link
+          href="https://shishuacademy.gov.bd/"
+          target="_blank"
+          className="flex gap-2"
+        >
+          Bangladesh Shishu Academy
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="size-4"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+            />
+          </svg>
+        </Link>
+      </div>
+
+      <hr className="w-2/6 mx-auto" />
+
       {/* copyright */}
-      <p className="text-center text-white text-xs">
+      <p className="text-center text-white text-sm">
         &copy; {new Date().getFullYear()} All rights reserved. ICBC
       </p>
     </footer>
