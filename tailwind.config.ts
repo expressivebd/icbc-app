@@ -7,6 +7,7 @@ export default {
     "./components/**/*.{ts,tsx}",
     "./lib/**/*.{ts,tsx}",
   ],
+
   theme: {
     extend: {
       fontFamily: {

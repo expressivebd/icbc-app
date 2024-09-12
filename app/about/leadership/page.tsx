@@ -77,7 +77,7 @@ const page = () => {
           />
           <ButtonCard
             title="LEADERSHIP"
-            title2="INITIATIVES"
+            title2="ACTIVITIES"
             imgSrc="/about-leadership.jpg"
             href="/about/leadership"
             active
@@ -88,7 +88,7 @@ const page = () => {
       {/*Project background */}
       <HeroComponent
         titleUp="Bridging"
-        titleDown="Leadership Initiative"
+        titleDown="Leadership Activities"
         description="On 1st February 2024 the Hon’ble State Minister, Ministry of Women
               and Children Affairs and the Hon’ble Secretary, Ministry of Women
               and Children Affairs officially launched an innovative leadership

@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
     {
       id: 5,
       title: "Learning",
-      href: "https://www.icbcproject.org/learningspace",
+      href: "https://elephant-tuna-d3bt.squarespace.com/learningspace",
     },
     { id: 6, title: "Contact", href: "/contact" },
   ];
