@@ -77,9 +77,9 @@ const page = () => {
             href="/about/vision"
           />
           <ButtonCard
-            title="LEADERSHIP"
+            title="BRIDGING LEADERSHIP"
             title2="INITIATIVES"
-            imgSrc="/who-about.jpg"
+            imgSrc="/about-leadership.jpg"
             href="/about/leadership"
           />
         </div>

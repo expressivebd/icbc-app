@@ -63,6 +63,11 @@ const NewsCard = ({ id, img, title, date, href }: cardPros) => {
 const page = async () => {
   const allPosts = await getAllPosts(false);
 
+  // Sort posts by date (newest first)
+  const sortedPosts = allPosts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   return (
     <div className="pt-[7rem] max-sm:pt-[4rem] bg-[#DDF5FF]">
       {/* hero section */}
@@ -74,8 +79,8 @@ const page = async () => {
       <section className="container mx-auto px-6 xl:px-16 flex justify-center">
         {/* fetch allpost */}
         <div className="grid grid-cols-3 max-sm:grid-cols-1 gap-5 max-sm:gap-4 justify-center section-gap">
-          {allPosts &&
-            allPosts.map((post) => {
+          {sortedPosts &&
+            sortedPosts.map((post) => {
               const { _id, title, coverImage, date, slug } = post;
 
               return (

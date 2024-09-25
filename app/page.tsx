@@ -7,23 +7,42 @@ import NewsCard from "./components/newsCard";
 const stats = [
   {
     title: "200k",
-    heading: "Child Care Centers",
+    heading: "Children",
     description: "children aged 1-5 across 8000 Child Care Centers",
+    description2: "",
   },
   {
     title: "360k",
     heading: "Swim-Safe Facilities",
     description: "children aged 6-10 through 1600 Swim-Safe Facilities",
+    description2: "",
   },
   {
     title: "200k",
     heading: "Positive Parenting",
     description: "children parents are educated on positive parenting",
+    description2: "",
   },
   {
     title: "16k",
     heading: "Empowering Women",
     description: "women are employed and more exposured to networking",
+    description2: "",
+  },
+  {
+    title: "Training of Trainers (ToT)",
+    heading: "",
+    description:
+      "ECCD Officers and Supervisors in all 16 Implementing Districts and 45 Upazilas",
+    description2: "",
+  },
+  {
+    title: "Basic Training",
+    heading: "",
+    description:
+      "- 16,000 Caregivers and Assistant Caregivers across 8000 Child Care Centers",
+    description2:
+      "- Swimming Instructors and Swimming Supervisors in all 16 Implementing Districts and 45 Upazilas",
   },
 ];
 
@@ -89,26 +108,29 @@ export default async function Page() {
             <ButtonComponent text="Learn More" url="/project" />
           </div>
 
-          <div className="col-span-9 flex gap-2 max-sm:grid max-sm:grid-cols-2 max-sm:gap-x-0 max-sm:gap-y-6 pb-8 md:pb-0">
-            {stats.map((obj, index) => {
-              return (
-                <div
-                  key={index}
-                  className={`border-r-2 border-[#DDF5FF] last:border-r-0 md:px-8 px-4 max-sm:my-auto ${
-                    index === 1 ? "max-sm:border-r-0" : ""
-                  }`}
-                >
-                  <h3 className="font-montserrat text-3xl max-sm:text-2xl font-bold text-white">
-                    {obj.title}
-                  </h3>
+          <div className="col-span-9 pb-8 md:pb-0">
+            <div className="grid grid-cols-3 py-8 gap-2 gap-y-6 max-sm:grid max-sm:grid-cols-2 max-sm:gap-x-0 max-sm:gap-y-6">
+              {stats.map((obj, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={`border-r-2 border-[#DDF5FF] last:border-r-0 md:px-8 px-4 max-sm:my-auto ${
+                      index === 1 ? "max-sm:border-r-0" : ""
+                    }`}
+                  >
+                    <h3 className="font-montserrat text-3xl max-sm:text-2xl font-bold text-white">
+                      {obj.title}
+                    </h3>
 
-                  <h4 className="text-slate-200 text-lg font-montserrat font-semibold mt-2">
-                    {obj.heading}
-                  </h4>
-                  <p className="text-slate-300 mt-2">{obj.description}</p>
-                </div>
-              );
-            })}
+                    <h4 className="text-slate-200 text-lg font-montserrat font-semibold mt-2">
+                      {obj.heading}
+                    </h4>
+                    <p className="text-slate-300 mt-2">{obj.description}</p>
+                    <p className="text-slate-300 mt-2">{obj.description2}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
