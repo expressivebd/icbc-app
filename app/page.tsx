@@ -67,7 +67,7 @@ export default async function Page() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-xl"></div>
 
           <h3 className="absolute inset-0 flex items-center justify-center font-montserrat font-bold text-4xl max-sm:text-xl text-white">
-            শিশুরাই রত্ন, করবো যত্ন
+            শিশুরাই রত্ন, করব যত্ন
           </h3>
         </div>
 
