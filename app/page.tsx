@@ -3,6 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import ButtonComponent from "./components/button";
 import NewsCard from "./components/newsCard";
+import PartnerCard from "./components/partnerCard";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const stats = [
   {
@@ -225,6 +233,37 @@ export default async function Page() {
         </div>
       </section>
 
+      {/* Activities of our partners */}
+      <section className="section-gap bg-primary">
+        <div className=" container mx-auto px-6 xl:px-16">
+          <h2 className="font-montserrat font-bold text-3xl max-sm:text-xl text-white">
+            Activities of Our Partners
+          </h2>
+          <div className="px-12 py-4">
+            <Carousel>
+              <CarouselContent>
+                <CarouselItem className="lg:basis-1/3">
+                  <PartnerCard />
+                </CarouselItem>
+                <CarouselItem className="lg:basis-1/3">
+                  <PartnerCard />
+                </CarouselItem>
+                <CarouselItem className="lg:basis-1/3">
+                  <PartnerCard />
+                </CarouselItem>
+                <CarouselItem className="lg:basis-1/3">
+                  <PartnerCard />
+                </CarouselItem>
+                <CarouselItem className="lg:basis-1/3">
+                  <PartnerCard />
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+        </div>
+      </section>
       {/* News and Updates */}
       <section className="container mx-auto px-6 xl:px-16 section-gap">
         {/* headline */}
