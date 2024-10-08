@@ -3,15 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import ButtonComponent from "./components/button";
 import NewsCard from "./components/newsCard";
-import PartnerCard from "./components/partnerCard";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-
+import NgoEvents from "./components/ngoEvents";
+import TopHero from "./components/topHero";
 const stats = [
   {
     title: "200k",
@@ -62,22 +55,7 @@ export default async function Page() {
       {/* hero section */}
       <section className="container mx-auto px-6 xl:px-16 py-4">
         {/* image */}
-        <div className="relative">
-          <Image
-            src="/home-hero.jpg"
-            alt="hero"
-            width={1920}
-            height={500}
-            className="object-cover object-center rounded-[30px] max-sm:rounded-xl"
-          />
-
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-xl"></div>
-
-          <h3 className="absolute inset-0 flex items-center justify-center font-montserrat font-bold text-4xl max-sm:text-xl text-white">
-            শিশুরাই রত্ন, করব যত্ন
-          </h3>
-        </div>
+        <TopHero />
 
         {/* headline and logos */}
         <div className="grid grid-cols-12 max-sm:flex max-sm:flex-col py-8 gap-8">
@@ -234,36 +212,8 @@ export default async function Page() {
       </section>
 
       {/* Activities of our partners */}
-      <section className="section-gap bg-primary">
-        <div className=" container mx-auto px-6 xl:px-16">
-          <h2 className="font-montserrat font-bold text-3xl max-sm:text-xl text-white">
-            Activities of Our Partners
-          </h2>
-          <div className="px-12 py-4">
-            <Carousel>
-              <CarouselContent>
-                <CarouselItem className="lg:basis-1/3">
-                  <PartnerCard />
-                </CarouselItem>
-                <CarouselItem className="lg:basis-1/3">
-                  <PartnerCard />
-                </CarouselItem>
-                <CarouselItem className="lg:basis-1/3">
-                  <PartnerCard />
-                </CarouselItem>
-                <CarouselItem className="lg:basis-1/3">
-                  <PartnerCard />
-                </CarouselItem>
-                <CarouselItem className="lg:basis-1/3">
-                  <PartnerCard />
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
-        </div>
-      </section>
+      <NgoEvents />
+
       {/* News and Updates */}
       <section className="container mx-auto px-6 xl:px-16 section-gap">
         {/* headline */}

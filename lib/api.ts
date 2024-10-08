@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 const POST_GRAPHQL_FIELDS = `
   _id
   slug
@@ -50,7 +53,25 @@ const ElectricMedia_Graphql_Fileds = `
       videoId
     }
 `;
+//NGO EVENT QUERY
+const NGO_EVENT_GRAPHQL_FIELDS = `
+  items {
+    eventHeader
+    eventPhoto {
+      url
+    }
+  }
+`;
 
+export async function getNgoEvents(): Promise<any[]> {
+  const entries = await fetchGraphQL(
+    "query { ngoEventCollection { items { eventHeader eventPhoto { url } } } }",
+    true
+  );
+  console.log(entries);
+  console.log(process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN);
+  return entries?.data?.ngoEventCollection?.items;
+}
 async function fetchGraphQL(query: string, preview = false): Promise<any> {
   return fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
