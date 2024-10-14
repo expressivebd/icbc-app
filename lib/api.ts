@@ -54,35 +54,31 @@ const ElectricMedia_Graphql_Fileds = `
     }
 `;
 //NGO EVENT QUERY
-const NGO_EVENT_GRAPHQL_FIELDS = `
-  items {
-    eventHeader
-    eventPhoto {
-      url
-    }
-  }
-`;
 
 export async function getNgoEvents(): Promise<any[]> {
   const entries = await fetchGraphQL(
     "query { ngoEventCollection { items { eventHeader eventPhoto { url } } } }",
     true
   );
-  console.log(entries);
-  console.log(process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN);
   return entries?.data?.ngoEventCollection?.items;
+}
+
+export async function getBannerContent(): Promise<any[]> {
+  const entries = await fetchGraphQL(
+    "query { heroContentCollection { items { contentName bannerText bannerPhoto { url } } } }",
+    true
+  );
+  return entries?.data?.heroContentCollection?.items;
 }
 async function fetchGraphQL(query: string, preview = false): Promise<any> {
   return fetch(
-    `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
+    `https://graphql.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}`,
     {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${
-          preview
-            ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
-            : process.env.CONTENTFUL_ACCESS_TOKEN
+          preview ? CONTENTFUL_PREVIEW_ACCESS_TOKEN : CONTENTFUL_ACCESS_TOKEN
         }`,
       },
       body: JSON.stringify({ query }),

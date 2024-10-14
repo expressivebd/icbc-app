@@ -5,6 +5,7 @@ import ButtonComponent from "./components/button";
 import NewsCard from "./components/newsCard";
 import NgoEvents from "./components/ngoEvents";
 import TopHero from "./components/topHero";
+import TestBanner from "./components/testBanner";
 const stats = [
   {
     title: "200k",
@@ -55,7 +56,7 @@ export default async function Page() {
       {/* hero section */}
       <section className="container mx-auto px-6 xl:px-16 py-4">
         {/* image */}
-        <TopHero />
+        <TestBanner />
 
         {/* headline and logos */}
         <div className="grid grid-cols-12 max-sm:flex max-sm:flex-col py-8 gap-8">

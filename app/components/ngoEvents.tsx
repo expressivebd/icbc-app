@@ -8,7 +8,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { GetServerSideProps } from "next";
 import { getNgoEvents } from "@/lib/api";
 
 interface NgoEvent {
@@ -51,10 +50,12 @@ const NgoEvents: React.FC = () => {
           <Carousel>
             <CarouselContent>
               {events.length === 0 ? (
-                <p>No events found</p>
+                <p className="text-white font-semibold text-2xl text-center">
+                  No events found
+                </p>
               ) : (
                 events.map((event, index) => (
-                  <CarouselItem key={index} className="lg:basis-1/3">
+                  <CarouselItem key={index} className="lg:basis-1/3 py-8">
                     <PartnerCard
                       imageUrl={event.eventPhoto.url}
                       text={event.eventHeader}
@@ -64,6 +65,7 @@ const NgoEvents: React.FC = () => {
               )}
             </CarouselContent>
             <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </div>
       </div>
